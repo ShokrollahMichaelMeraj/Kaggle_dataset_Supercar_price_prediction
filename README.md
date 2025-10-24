@@ -4,6 +4,11 @@
 ## To do section:
 
 - set up architecture and file system. 
+- choose direction:
+-   do we want an interactive app? pros and cons
+-   do we want to just keep it a notebook? pros and cons
+- choose which kaggle dataset we want, 
+
 
 
 
