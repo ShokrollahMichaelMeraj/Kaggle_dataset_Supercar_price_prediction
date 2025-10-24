@@ -1,41 +1,34 @@
 # ======================================
-# PYTHON ENVIRONMENT
+# PYTHON FILES
 # ======================================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.so
-*.egg
 *.egg-info/
 dist/
 build/
 .eggs/
-*.manifest
-*.spec
 
-# Virtual environment folders
+# ======================================
+# ENVIRONMENTS
+# ======================================
 venv/
-env/
-ENV/
+.env/
 .venv/
-.ipynb_checkpoints/
-*.ipynb_checkpoints
+ENV/
 
 # ======================================
-# DATA FILES (Large or Sensitive)
+# DATA FILES
 # ======================================
-# Keep raw and processed data out of GitHub (too large)
-data/raw/
-data/processed/
-data/external/
-*.csv
+# Keep all small CSVs (safe for teamwork)
+# Only ignore very large or unnecessary data types
 *.xlsx
 *.json
 *.parquet
 
 # ======================================
-# MODEL FILES
+# MODELS
 # ======================================
 models/
 *.pkl
@@ -43,9 +36,15 @@ models/
 *.h5
 *.pt
 *.pth
+!models/.gitkeep
 
 # ======================================
-# IDE / SYSTEM FILES
+# NOTEBOOK CHECKPOINTS
+# ======================================
+.ipynb_checkpoints/
+
+# ======================================
+# IDE & SYSTEM FILES
 # ======================================
 .vscode/
 .idea/
@@ -53,39 +52,14 @@ models/
 Thumbs.db
 
 # ======================================
-# LOGS, TEMP, AND CACHE FILES
+# LOGS & TEMP FILES
 # ======================================
 *.log
 logs/
 tmp/
-temp/
-__temp__/
 .cache/
-*.bak
 
 # ======================================
-# ENVIRONMENT & CONFIG FILES
-# ======================================
-.env
-.env.local
-config.yaml
-config.json
-
-# ======================================
-# JUPYTER NOTEBOOK CHECKPOINTS
-# ======================================
-.ipynb_checkpoints/
-.notebooks_checkpoint/
-
-# ======================================
-# STREAMLIT / WEB APP STUFF
+# APP / STREAMLIT CONFIG
 # ======================================
 .streamlit/
-
-# ======================================
-# IDE / SYSTEM FILES
-# ======================================
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db

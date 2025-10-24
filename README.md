@@ -70,3 +70,30 @@ Explanation of Each Folder
 
 
 
+# virtual environment set up
+
+### what i did for initial set up
+```
+python3 -m venv venv    # set up virtual environment
+
+source venv/bin/activate # activate
+
+pip3 install pandas numpy scikit-learn matplotlib seaborn xgboost streamlit joblib  # install dependencies 
+
+pip3 freeze > requirements.txt # save packages what you just installed into into requirement.txt
+
+deactivate # to deactivate venv (virtual environment)
+
+```
+
+### what you need to do
+
+```
+python3 -m venv venv # initialize virtual enviornment
+source venv/bin/activate # activate virtual envionment 
+pip install -r requirements.txt #install requiremnets
+deactivate # to deactivate venv (virtual environment)
+
+
+```
+
