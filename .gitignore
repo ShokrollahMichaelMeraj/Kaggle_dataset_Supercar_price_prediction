@@ -1,0 +1,91 @@
+# ======================================
+# PYTHON ENVIRONMENT
+# ======================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual environment folders
+venv/
+env/
+ENV/
+.venv/
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ======================================
+# DATA FILES (Large or Sensitive)
+# ======================================
+# Keep raw and processed data out of GitHub (too large)
+data/raw/
+data/processed/
+data/external/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# ======================================
+# MODEL FILES
+# ======================================
+models/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# ======================================
+# IDE / SYSTEM FILES
+# ======================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ======================================
+# LOGS, TEMP, AND CACHE FILES
+# ======================================
+*.log
+logs/
+tmp/
+temp/
+__temp__/
+.cache/
+*.bak
+
+# ======================================
+# ENVIRONMENT & CONFIG FILES
+# ======================================
+.env
+.env.local
+config.yaml
+config.json
+
+# ======================================
+# JUPYTER NOTEBOOK CHECKPOINTS
+# ======================================
+.ipynb_checkpoints/
+.notebooks_checkpoint/
+
+# ======================================
+# STREAMLIT / WEB APP STUFF
+# ======================================
+.streamlit/
+
+# ======================================
+# IDE / SYSTEM FILES
+# ======================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
