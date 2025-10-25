@@ -89,7 +89,7 @@ deactivate # to deactivate venv (virtual environment)
 ### what you need to do
 
 ```
-python3 -m venv venv # initialize virtual enviornment
+python3 -m venv venv # initializes virtual enviornment
 source venv/bin/activate # activate virtual envionment 
 pip install -r requirements.txt #install requiremnets
 deactivate # to deactivate venv (virtual environment)
