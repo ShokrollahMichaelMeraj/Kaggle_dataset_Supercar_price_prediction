@@ -94,6 +94,13 @@ source venv/bin/activate # activate virtual envionment
 pip install -r requirements.txt #install requiremnets
 deactivate # to deactivate venv (virtual environment)
 
+For windows it is:
+python -m venv venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+venv\Scripts\Activate.ps1 # for powershell
+venv\Scripts\activate.bat # for command prompt
+pip install -r requirements.txt
+deactivate
 
 ```
 

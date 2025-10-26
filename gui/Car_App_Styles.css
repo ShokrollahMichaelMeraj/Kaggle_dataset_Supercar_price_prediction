@@ -1,0 +1,138 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+
+label {
+    display: inline-block;
+    clear: left;
+    width: 100px;
+    text-align: left;
+}
+
+input,
+select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+button {
+    background: #0d6efd;
+    color: #fff;
+    border: 0;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    outline: 0;
+}
+
+button:hover {
+    background: #2d7cf2;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    border-color: #7db0fb;
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba(24, 117, 255, 0.25);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 3px solid #962e23;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+li {
+    list-style-type: none;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #962e23;
+}
+
+.modal-header h3 {
+    color: #962e23;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    color: #962e23;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.category-specific {
+    display: none;
+}
+
+.category-specific.active {
+    display: block;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#create-car-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#create-car-button {
+    border: 3px solid #70543E;
+    padding: 10px 35px;
+    border-radius: 12px;
+}
+
+#error-message-box {
+    color: red;
+}
