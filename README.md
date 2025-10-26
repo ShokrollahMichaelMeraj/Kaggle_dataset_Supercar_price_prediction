@@ -3,12 +3,15 @@
 
 ## To do section:
 
-- set up architecture and file system. 
-- choose direction:
+- ✅ set up architecture and file system. (DONE)
+- ✅ choose which kaggle dataset we want? (DONE): Final pick "Elite_Sports_Cars_in_Data.csv".
+- ✅ Mockup UI
+- ❌ choose direction:
 -   do we want an interactive app? pros and cons
 -   do we want to just keep it a notebook? pros and cons
-- choose which kaggle dataset we want, 
-
+- ❌ Preprocessing -> ....
+- 
+ 
 
 
 
@@ -54,19 +57,6 @@ supercar-price-prediction/
 ```
 
 
-"""
-Explanation of Each Folder
-    Folder	Purpose
-    data/	Holds all datasets — separate raw vs processed to avoid overwriting originals.
-    notebooks/	Step-by-step experimentation and documentation (good for your report).
-    src/	Reusable code modules so you don’t repeat logic in notebooks.
-    models/	Where you save trained .pkl or .joblib model files.
-    app/	Optional frontend (Streamlit or Flask).
-    reports/	Graphs, figures, and summaries for your presentation.
-    requirements.txt	Keeps track of packages to install.
-    main.py	One-click script to train or run the model (optional for automation).
-"""
-
 
 
 
@@ -103,4 +93,3 @@ pip install -r requirements.txt
 deactivate
 
 ```
-
