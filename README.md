@@ -1,16 +1,28 @@
-# Kaggle_dataset_Supercar_price_prediction.
+# Kaggle_dataset_Supercar_0to60_time_prediction.
 
 
 ## To do section:
 
 - ✅ set up architecture and file system. (DONE)
 - ✅ choose which kaggle dataset we want? (DONE): Final pick "Elite_Sports_Cars_in_Data.csv".
-- ✅ Mockup UI
-- ❌ choose direction:
--   do we want an interactive app? pros and cons
--   do we want to just keep it a notebook? pros and cons
-- ❌ Preprocessing -> ....
-- 
+- ✅ Mockup gui: done
+- ❌ new exploration -> ....
+-
+- new features:
+
+    - year (discounter or decay varible because older cars will have reduced horsepower)
+    - initial horsepower
+    - millage
+    - engine size
+    - top speed,
+    - weight.
+    - torque
+
+- need to make a fast api for the react app,
+- need to trian and set up model. 
+- exploration
+0- set up either google workspace 
+
  
 
 
@@ -18,7 +30,15 @@
 ## system architecture:
 
 ```
-supercar-price-prediction/
+supercar-0to60-prediction/
+│
+│
+│
+│
+│
+│
+│
+
 │
 ├── data/
 │   ├── raw/                # Original Kaggle CSVs (never modify these)
@@ -93,3 +113,18 @@ pip install -r requirements.txt
 deactivate
 
 ```
+
+
+
+### CheckPoints:
+
+
+## Exploration Notes:
+- the dataset is clean. 
+- there is a strong inverse relation ship between torque and 0-60
+- there is a strong inverse relation ship between Horsepower and 0-60 
+- seems to not matter too much, in cell [64] we see the graph.
+- top speed has more of a complex relationship and we have to take everything else into acocunt
+- weight has a dirct relationship. but  is effect by other factors. 
+- engine size have a direct to complex relationship, some big engins give off fast 0-60 some small engines
+have higher 0-60.
