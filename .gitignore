@@ -1,0 +1,65 @@
+# ======================================
+# PYTHON FILES
+# ======================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ======================================
+# ENVIRONMENTS
+# ======================================
+venv/
+.env/
+.venv/
+ENV/
+
+# ======================================
+# DATA FILES
+# ======================================
+# Keep all small CSVs (safe for teamwork)
+# Only ignore very large or unnecessary data types
+*.xlsx
+*.json
+*.parquet
+
+# ======================================
+# # MODELS
+# # ======================================
+# models/
+# *.pkl
+# *.joblib
+# *.h5
+# *.pt
+# *.pth
+# !models/.gitkeep
+
+# ======================================
+# NOTEBOOK CHECKPOINTS
+# ======================================
+.ipynb_checkpoints/
+
+# ======================================
+# IDE & SYSTEM FILES
+# ======================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ======================================
+# LOGS & TEMP FILES
+# ======================================
+*.log
+logs/
+tmp/
+.cache/
+
+# ======================================
+# APP / STREAMLIT CONFIG
+# ======================================
+.streamlit/
