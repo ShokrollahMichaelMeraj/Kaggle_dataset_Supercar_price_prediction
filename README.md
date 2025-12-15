@@ -1,17 +1,22 @@
-# Kaggle_dataset_Supercar_0to60_time_prediction.
+# Kaggle_dataset_Supercar_0_to_60_Acceleration_prediction.
+
+
+## Description
 
 
 ## To do section:
 
 - ✅ set up architecture and file system. (DONE)
 - ✅ choose which kaggle dataset we want? (DONE): Final pick "Elite_Sports_Cars_in_Data.csv".
-- ✅ Mockup gui: done
-- ✅ exploration on new dataset (5000 ....)
-- ✅ Preprocessing on new dataset (already done)
-- ✅ documenattion. 
+- ✅ Mockup gui: (DONE)
+- ✅ exploration on new dataset (DONE)
+- ✅ Preprocessing on new dataset (DONE)
+- ✅ Training (DONE)
+- ✅ documenattion. (DONE)
 - 
 
--
+## Feature Set:
+
 -  Numerical features:
 
     - year (discounter or decay varible because older cars will have reduced horsepower)
@@ -31,15 +36,6 @@
         - AWD
         - RWD
 
-
-- 
-
-
-- need to make a fast api for the react app,
-- need to trian and set up model. 
-- exploration
-0- set up either google workspace 
-
  
 
 
@@ -55,36 +51,33 @@ supercar-0to60-prediction/
     │
     ├── data/
     │   ├── raw/                # Original Kaggle CSVs (never modify these)
-    │   ├── processed/          # Cleaned data ready for training
-    │   └── external/           # Optional: other datasets merged in
+    │   └── processed/          # Cleaned data ready for training
+    │   
     │
     ├── notebooks/
     │   ├── 01_exploration.ipynb        # EDA (exploratory data analysis)
     │   ├── 02_preprocessing.ipynb      # Data cleaning & feature engineering
-    │   ├── 03_training.ipynb           # Model training experiments
-    │   └── 04_evaluation.ipynb         # Model evaluation & visualizations
-    │
-    ├── src/
-    │   ├── __init__.py
-    │   ├── data_preprocessing.py       # Functions to clean and prepare data
-    │   ├── feature_engineering.py      # Add custom derived features
-    │   ├── model_training.py           # Code to train & evaluate model
-    │   ├── model_utils.py              # Save/load model functions
-    │   └── visualization.py            # Plotting helpers
+    │   └── 03_training.ipynb           # Model training experiments
+    │   
     │
     ├── models/
-    │   └── supercar_price_model.pkl    # Saved trained model
+    │   ├── feature_info.pkl
+    │   ├── feature_names.pkl
+    │   ├── nn_scaler.pkl
+    │   ├── feature_names.pkl       
+    │   └── nn_zero_to_sixty.keras 
     │
-    ├── app/
+    ├── gui/
     │   └── app.py                      # Streamlit or Flask app (UI)
     │
     ├── reports/
-    │   ├── figures/                    # Graphs and plots
-    │   └── model_summary.txt           # Performance summary
+    │   └── figures/ 
+    │       └── Distribution_of_Supercar_0-60_vs_Torque.png              
+    │   
     │
     ├── requirements.txt                # List of dependencies
-    ├── README.md                       # Project description
-    └── main.py                         # Entry point if you want to run 
+    └── README.md                       # Project description
+    
 
 
 ```
@@ -93,69 +86,22 @@ supercar-0to60-prediction/
 
 
 
-# virtual environment set up
-
-### what i did for initial set up
-```
-python3 -m venv venv    # set up virtual environment
-
-source venv/bin/activate # activate
-
-pip3 install pandas numpy scikit-learn matplotlib seaborn xgboost streamlit joblib  # install dependencies 
-
-pip3 freeze > requirements.txt # save packages what you just installed into into requirement.txt
-
-deactivate # to deactivate venv (virtual environment)
-
-```
-
-### what you need to do
-
-```
-python3 -m venv venv # initializes virtual enviornment
-source venv/bin/activate # activate virtual envionment 
-pip install -r requirements.txt #install requiremnets
-deactivate # to deactivate venv (virtual environment)
-
-For windows it is:
-python -m venv venv
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-venv\Scripts\Activate.ps1 # for powershell
-venv\Scripts\activate.bat # for command prompt
-pip install -r requirements.txt
-deactivate
-
-```
 
 
 
-### CheckPoints:
+
+### Milestones, Discoveries, Issues, Solutions and Results:
 
 
-## Exploration Notes:
+Exploritory data analysis & Training
+
 - the dataset is clean. 
 - there is a strong inverse relation ship between torque and 0-60
-- there is a strong inverse relation ship between Horsepower and 0-60 
-- seems to not matter too much, in cell [64] we see the graph.
-- top speed has more of a complex relationship and we have to take everything else into acocunt
-- weight has a dirct relationship. but  is effect by other factors. 
-- engine size have a direct to complex relationship, some big engins give off fast 0-60 some small engines have higher 0-60.
-
-
-## Proprocessing Notes
-
-## Training Milestones:
-
-- used a 3 hidden layer architecture , 64 -> 64 -> 32 most common in for regression problems, also called funnel pattern
-
-
-
-
-## Training Notes
-
-Exploritory data analysis
-
-- correlation for each feature was checked, we expected 
+- there is a strong inverse relation ship between Horsepower and 0-60 .
+- top speed has more of a complex relationship and we have to take everything else into acocunt: top speed was removed as the relationship is already captured by other features
+- weight has a direct relationship. 
+- engine size have a direct to complex relationship: exploration is required.
+- there are no issues in terms of missing, duplicate, different spellings of the same feature name.
 
  - Originally trained on the kaggle dataset, on 'year', 'car age','Horsepower', 'Mileage', 'Engine_Size', 'Weight', 'Torque' and 'top speed'. This gave a very high error (~2.6 seconds)
  - we analyzed all features and dicovered the following:
@@ -171,7 +117,7 @@ Exploritory data analysis
         - we experimented with different layers setups,
         - 32 -> 16 -> 1  (caused underfitting)
         - 64 -> 32 -> 1  (MAE : 2.2)
-        - 64 -> 32 -> 32  (MAE : 2.0)
+        - 64 -> 32 -> 32->1  (MAE : 2.0)
         - 128 -> 128 -> 64 -> 1  (caused Overfitting)
         - final choice:  64 -> 32 -> 32  (MAE : 2.0), resulting in sufficienct capacity without overfitting, added dropout for regulerization (meaing it would penlize the model if it started becoming too complex.)
     - experimentation with batch sizes
@@ -245,10 +191,10 @@ Exploritory data analysis
     -  val-mae would explode through some runs:
         - 0.36 -> 3.36 -> 19.88 
 
-    - solution: the large gradient caused huge weight update resulting the model to spiral out of control. By introducing gradient clipping through clipnorm 1.0 this issue was resolved. Running the model 10+ times showed no instability or explosion. resulting in consistent MAE: ~0.27-0.30 (current and best results.)
+    - Solution: The large gradient caused huge weight update resulting the model to spiral out of control. By introducing gradient clipping through clipnorm 1.0 this issue was resolved. Running the model 10+ times showed no instability or explosion. resulting in consistent MAE: ~0.27-0.30 (current and best results.)
 
 - Testing with random seeds:
-    - upto this point t o work with the same split we used seed set at 42 which would allow to see the real change different configuratiosn would give us. 
+    - upto this point to work with the same split we used seed set at 42 which would allow to see the real change different configuratiosn would give us. 
     - now we experimented with different seeds which did not show any huge changes.
     - 
 
@@ -257,33 +203,64 @@ Exploritory data analysis
     - the model was saved using joblid for making predictions later using the trained model and connecting it to the fastapi.
 
 
+## How To Run:
+
+### Getting Started:
+1. Clone the Repository: ```git clone ... ```
+2. Enter repository through visual studio code
+
+
+### virtual environment set up
+
+**For initial set up on MAC OS:**
+
+```
+python3 -m venv venv    
+
+source venv/bin/activate 
+
+pip3 install -r requirements.txt
+```
+
+**For initial set up on Windows:**
+
+```
+python3 -m venv venv    
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+venv\Scripts\Activate.ps1 # for powershell
+
+venv\Scripts\activate.bat # for command prompt
+
+pip install -r requirements.txt
+```
+
+**To exit the virtual environment:**
+- kill terminal
+- or run ``` deactivate ```
+
+
+### Running the Notebook
+1. Run ```jupyter notebook ``` in terminal, this will open up a web browser
+2. select the notebook 
+3. select desired notebook:
+    - 01_exploration.ipynb        # EDA (exploratory data analysis)
+    - 02_preprocessing.ipynb      # Data cleaning & feature engineering
+    - 03_training.ipynb           # Model training experiments
+
+4. run each cell to see our results
+
+### Modifications and Use:
+
+- You can use our saved models to predict your own 0-100 acceleration times by saving and running our models from the /model folder, or visit our User interface.
 
 
 
 
+## User Interface:
+
+- Generated using Figma Make, it enables users to make their own predictions, 
 
 
 
-
-
-        
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- 

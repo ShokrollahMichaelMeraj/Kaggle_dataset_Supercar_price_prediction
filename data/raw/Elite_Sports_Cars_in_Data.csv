@@ -1,5 +1,5 @@
 Brand,Model,Year,Country,Condition,Engine_Size,Horsepower,Torque,Weight,Top_Speed,Acceleration_0_100,Fuel_Type,Drivetrain,Transmission,Fuel_Efficiency,CO2_Emissions,Price,Mileage,Popularity,Safety_Rating,Number_of_Owners,Market_Demand,Insurance_Cost,Production_Units,Log_Price,Log_Mileage,Modification
-Nissan,720S,2006,Asia,,3.7,used420,705,1785,238,5.7,Diesel,RWD,Automatic,10.5,307,81580,96664,Low,2,4,Medium,13410,5000,11.309351670702771,11.479006671766601,V-Spec
+Nissan,720S,2006,Asia,,3.7,used,420,705,1785,238,5.7,Diesel,RWD,Automatic,10.5,307,81580,96664,Low,2,4,Medium,13410,5000,11.309351670702771,11.479006671766601,V-Spec
 McLaren,911 Turbo S,2009,Europe,new,5.3,1104,766,992,386,4.6,Electric,RWD,DCT,9.4,113,308455,159630,High,2,2,Medium,10795,1000,12.639334486547801,11.980620180725527,
 Chevrolet,M4 Competition,2009,USA,new,5.5,153,1573,2022,397,6.7,Diesel,FWD,Automatic,5.0,321,420374,111496,High,1,2,Low,1716,20000,12.94890244904257,11.621752963690746,
 Bugatti,Chiron,1982,Asia,used,5.4,544,1009,1091,151,2.7,Petrol,RWD,CVT,7.3,343,123690,217228,High,2,4,Medium,11618,20000,11.725541799064322,12.288707375624645,
