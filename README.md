@@ -3,9 +3,9 @@
 
 ## Description
 
-- End-to-end machine learning that predicts supercar 0–60 mph acceleration times
-using engineered physical ratios and a neural network trained on a corrected
-5,000-vehicle dataset. Achieved **0.27–0.30s MAE**, improving over baseline
+- End-to-end machine learning that predicts supercar 0–100 km/h acceleration times
+using engineered physical ratios and a neural network trained on an updated
+5,000+ Kaggle supercar dataset. Achieved **0.27–0.30s MAE**, improving over baseline
 models (>2.6s MAE) through feature engineering, optimizer tuning, dataset
 validation, and training stability techniques (gradient clipping).
 
@@ -13,7 +13,7 @@ validation, and training stability techniques (gradient clipping).
 ## Problem Statement
 
 - Accurately predicting 0–60 MPH acceleration is non-trivial due to the nonlinear
-relationships between power, weight, drivetrain, transmission, and traction and other existing aspects.
+relationships between power, weight, drivetrain, transmission, and traction as well as other existing aspects.
 Most public datasets contain noisy or incorrect labels, limiting model
 performance. This project addresses both modeling and data-quality challenges.
 
